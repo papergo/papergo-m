@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-switch.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/napkin.css"/>
+	<script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/cart.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/fastclick.js" type="application/javascript" charset="utf-8"></script>
+	<script src="/js/bootstrap-switch.js" type="text/javascript" charset="utf-8"></script>
+	<title>Paper Go</title>
+</head>
+<body style="background: #fff;">
+	<!--<div class="header">
+		<div class="arrow fl"></div>
+		<div class="logo"></div>
+		<div class="person fr"></div>
+	</div>-->
+		<div class="user">
+			<div class="user-name">
+				<p class="fl user-pic"><img src="{{head_img}}" alt="" /></p>
+				<p class="fl user-text">{{nickname}}</p>
+				<p class="fl user-level"><img src="/img/cartpage_06.png" alt="" /></p>
+			</div>
+			<div class="user-state">
+				<div class="smoney">
+					<p>余额</p>
+					<p class="fr money">{{balance/100}}</p>
+				</div>
+				<div class="smoney spoint">
+					<p>积分</p>
+					<p class="fr point">{{score}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="paytype">
+			<div class="pay-title">请选择</div>
+
+            {{each products as value index}}
+            <div class="paytype1 {{if index==1}} active {{/if}} ">
+            <div class="fl pcircle"><img src="/img/check_03.jpg" alt="" /></div>
+                    <div class="fl psize">{{value.size/10}}cm<span class="psize_x">x</span><span class="psize_num{{if index != 0 }} psize_num{{/if}}{{if index != 0}}{{index}}{{/if}}">{{value.per}}</span></div>
+                    <div class="fr priceaddpoint priceaddpoint1 priceaddpoint0">
+                        <p class="fl ">￥{{value.price/100}}</p>
+                        <div class="switch">
+                            <input type="checkbox" style="display:none" name="my-checkbox{{index+1}}"  checked />
+                        </div>
+                        <p class="fr">{{value.score}}积分</p>
+                    </div>
+                    <input type="hidden" value="{{value._id}}"></input>
+                    <input type="hidden" value="{{value.price}}"></input>
+                    <input type="hidden" value="{{value.size}}"></input>
+                    <input type="hidden" value="{{value.score}}"></input>
+                    <input type="hidden" value="{{value.per}}"></input>
+            </div>
+            {{/each}}
+
+			<div class="btn">支付</div>
+		</div>
+
+        <form id="trade_form" action="/trade/to_trade" method="post">
+            <input type="hidden" id="open_id_input"  name="open_id" value="{{open_id}}">
+            <input type="hidden" id="dev_no_input"  name="dev_code" value="{{dev_code}}">
+            {{each products as value index}}
+                {{if index==1}}
+                    <input type="hidden" id="pro_id_input" name="pro_id" value="{{value._id}}">
+                    <input type="hidden" id="amount_input" name="amount" value="{{value.price}}">
+                    <input type="hidden" id="size_input" name="size" value="{{value.size}}">
+                    <input type="hidden" id="score_input" name="score" value="{{value.score}}">
+                    <input type="hidden" id="per_input" name="per" value="{{value.per}}">
+                {{/if}}
+            {{/each}}
+        </form>
+
+		<div class="cover" style="display: none;"></div>
+
+		{{each products as value index}}
+			{{if index==1}}
+				<div class="pop1" style="display: none;">
+					<p class="pop1title">您将支付{{value.price/100}}元购买{{value.per}}份{{value.size}}CM的纸巾？</p>
+					<div class="popbtn">
+						<p class="fl btn-sure">确定</p>
+						<p class="fr btn-cancel">取消</p>
+					</div>
+				</div>
+			{{/if}}
+		{{/each}}
+
+	<script type="text/javascript">
+        {{each products as value index}}
+            $("[name='my-checkbox{{index+1}}']").bootstrapSwitch("state",false);
+            $("[name='my-checkbox{{index+1}}']").bootstrapSwitch("labelText","￥{{value.price/100}}");
+            $('input[name="my-checkbox{{index+1}}"]').on('switchChange.bootstrapSwitch', function(event, state) {
+                if( state == false ){
+                    setTimeout(function(){
+                        $('input[name="my-checkbox{{index+1}}"]').bootstrapSwitch('labelText', '￥{{value.price/100}}');
+                    },200);
+
+                }else{
+                    setTimeout(function(){
+                        $('input[name="my-checkbox{{index+1}}"]').bootstrapSwitch('labelText', '{{value.score}}积分');
+                    },200);
+
+                }
+            });
+        {{/each}}
+
+		var btn = document.getElementsByClassName('btn');
+		var cover = document.getElementsByClassName('cover');
+		var pop1 = document.getElementsByClassName('pop1');
+		var btn_cancel = document.getElementsByClassName('btn-cancel');
+		var btn_sure = document.getElementsByClassName('btn-sure');
+		btn[0].onclick=function(){
+			cover[0].style.display = 'block';
+			pop1[0].style.display = 'block';
+		}
+		btn_cancel[0].onclick=function(){
+			cover[0].style.display = 'none';
+			pop1[0].style.display = 'none';
+		}
+		btn_sure[0].onclick=function(){
+			cover[0].style.display = 'none';
+			pop1[0].style.display = 'none';
+            $('#trade_form').submit();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/napkin.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/swiper.min.css"/>
+	<title>纸品商场</title>
+</head>
+<body>
+	<!--<div class="header">
+		<div class="arrow fl"></div>
+		<div class="logo"></div>
+		<div class="person fr"></div>
+	</div>-->
+	<div class="banner">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/banner_03.jpg" alt="" /></div>
+				<div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/banner_03.jpg" alt="" /></div>
+				<div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/banner_03.jpg" alt="" /></div>
+				<div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/banner_03.jpg" alt="" /></div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+	<div class="mainbody">
+		<div class="mtab">
+			<div class="mtab-b1">
+				<i class="b1-pic"></i>
+				<p class="b1-text">卫生纸</p>
+			</div>
+			<div class="mtab-b1">
+				<i class="b1-pic b1-pic2"></i>
+				<p class="b1-text">面巾纸</p>
+			</div>
+			<div class="mtab-b1">
+				<i class="b1-pic b1-pic3"></i>
+				<p class="b1-text">湿纸</p>
+			</div>
+			<div class="mtab-b1">
+				<i class="b1-pic b1-pic4"></i>
+				<p class="b1-text">厨房用纸</p>
+			</div>
+		</div>
+		<div class="mhot">
+			<div class="hot-title">热门推荐</div>
+			<div class="hot-block">
+				<div class="block-good">
+					<i class="bgood-pic"><img src="/img/good_03.jpg" alt="" /></i>
+					<p class="bgood-text">超韧7层食品级面巾24包</p>
+					<ul class="bgood-price">
+						<li>35</li>
+						<li class="price-acco">350</li>
+						<li class="price-cart"></li>
+					</ul>
+				</div>
+				<div class="block-good block-good2">
+					<i class="bgood-pic"><img src="/img/good_03.jpg" alt="" /></i>
+					<p class="bgood-text">柔软4层食品级面巾36包</p>
+					<ul class="bgood-price">
+						<li>42</li>
+						<li class="price-acco">420</li>
+						<li class="price-cart"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="hot-block">
+				<div class="block-good">
+					<i class="bgood-pic"><img src="/img/good_03.jpg" alt="" /></i>
+					<p class="bgood-text">超韧7层食品级面巾24包</p>
+					<ul class="bgood-price">
+						<li>35</li>
+						<li class="price-acco">350</li>
+						<li class="price-cart"></li>
+					</ul>
+				</div>
+				<div class="block-good block-good2">
+					<i class="bgood-pic"><img src="/img/good_03.jpg" alt="" /></i>
+					<p class="bgood-text">柔软4层食品级面巾36包</p>
+					<ul class="bgood-price">
+						<li>42</li>
+						<li class="price-acco">420</li>
+						<li class="price-cart"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<a href="napkin.html" class="tab-home">首页</a>
+		<a href="classify.html" class="tab-classify">分类</a>
+		<a href="cart.html" class="tab-cart">购物车</a>
+	</div>
+	<script src="/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+		      	spaceBetween: 30,
+		      	loop: true,
+		      	pagination: {
+			        el: '.swiper-pagination',
+			        clickable: true,
+			        type: 'bullets',
+			       	bulletActiveClass: 'dot-active',
+			       	bulletClass : 'dot',
+		      	}
+		  
+		    });
+	</script>
+</body>
+</html>

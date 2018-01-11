@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/napkin.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/swiper.min.css"/>
+    <script src="/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <title>个人中心</title>
+</head>
+<body>
+    <!--<div class="header">
+        <div class="arrow fl"></div>
+        <div class="logo"></div>
+        <div class="person fr"></div>
+    </div>-->
+    <div class="user">
+        <div class="user-name">
+            <p class="fl user-pic"><img src="{{head_img}}" alt="" /></p>
+            <p class="fl user-text">{{nickname}}</p>
+            <p class="fl user-level"><img src="/img/cartpage_06.png" alt="" /></p>
+        </div>
+        <div class="user-state">
+            <div class="smoney">
+                <p>余额</p>
+                <p class="fr money">{{balance/100}}</p>
+            </div>
+            <div class="smoney spoint">
+                <p>积分</p>
+                <p class="fr point">{{score}}</p>
+            </div>
+        </div>
+    </div>
+  
+    <div class="account-list">
+        <ul>
+            <li><a href="javascript:;"><img src="/img/account_list_3.png" class="icon" />我的订单</a></li>
+            <li><a href="javascript:;"><img src="/img/account_list_2.png" class="icon" />交易明细</a></li>
+            <li><a href="javascript:;"><img src="/img/account_list_1.png" class="icon" />常见问题</a></li>
+            <li><a href="javascript:;"><img src="/img/account_list_4.png" class="icon" />建议反馈</a></li>
+            <li><a href="javascript:;"><img src="/img/account_list_5.png" class="icon" />关于我们</a></li>
+        </ul>
+    </div>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/classbanner_02.jpg" alt="" /></div>
+            <div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/classbanner_02.jpg" alt="" /></div>
+            <div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/classbanner_02.jpg" alt="" /></div>
+            <div class="swiper-slide"><img style="width: 100%;height: 100%;" src="/img/classbanner_02.jpg" alt="" /></div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <script src="/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var swiper = new Swiper('.swiper-container', {
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    type: 'bullets',
+                    bulletActiveClass: 'dot-active',
+                    bulletClass : 'dot',
+                }
+          
+            });
+    </script>
+</body>
+</html>

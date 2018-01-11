@@ -1,0 +1,27 @@
+{  
+    "wechat" : {  
+        "appID": "wx22fa4790e828ba66",  
+        "appSecret": "3ce22664e585bc39b8903850876d8c00",  
+        "token": "wechatpapergo",  
+        "prefix": "https://api.weixin.qq.com/cgi-bin/",  
+        "mpPrefix": "https://mp.weixin.qq.com/cgi-bin/" ,
+        "homePrefix":"http://m.paper-go.com",
+        "payPrefix":"/pay",
+        "state":"STATE" 
+    } ,
+    "pay":{
+        "partnerKey": "1q2w3e4r5t6y7u8i9o0pazsxdcfvgbhn",
+        "mchId": "1487661962",
+        "notifyPrefix": "/pay/notify"
+
+    } ,
+    "api_prefix":"http://api.paper-go.com",
+    "api_url":{
+        "products":"/products",
+        "trade_no":"/trade_no",
+        "user":"/user",
+        "device":"/device",
+        "pay_result":"/pay_result"
+    }
+} 
+

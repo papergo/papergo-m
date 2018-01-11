@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/node-v8.6.0/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@5.3.0
+3 info using node@v8.6.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle wechatpay@0.0.0~prestart: wechatpay@0.0.0
+6 info lifecycle wechatpay@0.0.0~start: wechatpay@0.0.0
+7 verbose lifecycle wechatpay@0.0.0~start: unsafe-perm in lifecycle true
+8 verbose lifecycle wechatpay@0.0.0~start: PATH: /opt/node-v8.6.0/lib/node_modules/npm/bin/node-gyp-bin:/opt/wechatpay/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/node-v8.6.0/bin:/opt/mongodb/bin:/root/bin
+9 verbose lifecycle wechatpay@0.0.0~start: CWD: /opt/wechatpay
+10 silly lifecycle wechatpay@0.0.0~start: Args: [ '-c', 'node ./bin/www' ]
+11 silly lifecycle wechatpay@0.0.0~start: Returned: code: 1  signal: null
+12 info lifecycle wechatpay@0.0.0~start: Failed to exec start script
+13 verbose stack Error: wechatpay@0.0.0 start: `node ./bin/www`
+13 verbose stack Exit status 1
+13 verbose stack     at EventEmitter.<anonymous> (/opt/node-v8.6.0/lib/node_modules/npm/lib/utils/lifecycle.js:289:16)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at EventEmitter.emit (events.js:213:7)
+13 verbose stack     at ChildProcess.<anonymous> (/opt/node-v8.6.0/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+13 verbose stack     at emitTwo (events.js:125:13)
+13 verbose stack     at ChildProcess.emit (events.js:213:7)
+13 verbose stack     at maybeClose (internal/child_process.js:927:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+14 verbose pkgid wechatpay@0.0.0
+15 verbose cwd /opt/wechatpay
+16 verbose Linux 3.10.0-514.6.2.el7.x86_64
+17 verbose argv "/opt/node-v8.6.0/bin/node" "/usr/local/bin/npm" "start"
+18 verbose node v8.6.0
+19 verbose npm  v5.3.0
+20 error code ELIFECYCLE
+21 error errno 1
+22 error wechatpay@0.0.0 start: `node ./bin/www`
+22 error Exit status 1
+23 error Failed at the wechatpay@0.0.0 start script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 1, true ]

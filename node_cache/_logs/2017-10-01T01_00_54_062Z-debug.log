@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/opt/node-v8.6.0/bin/node', '/usr/local/bin/npm', 'stop' ]
+2 info using npm@5.3.0
+3 info using node@v8.6.0
+4 verbose stack Error: missing script: stop
+4 verbose stack     at run (/opt/node-v8.6.0/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /opt/node-v8.6.0/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:114:5
+4 verbose stack     at /opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:401:5
+4 verbose stack     at checkBinReferences_ (/opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:45)
+4 verbose stack     at final (/opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:399:3)
+4 verbose stack     at then (/opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:159:5)
+4 verbose stack     at ReadFileContext.<anonymous> (/opt/node-v8.6.0/lib/node_modules/npm/node_modules/read-package-json/read-json.js:331:20)
+4 verbose stack     at ReadFileContext.callback (/opt/node-v8.6.0/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16)
+4 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:421:13)
+5 verbose cwd /opt/wechatpay
+6 verbose Linux 3.10.0-514.6.2.el7.x86_64
+7 verbose argv "/opt/node-v8.6.0/bin/node" "/usr/local/bin/npm" "stop"
+8 verbose node v8.6.0
+9 verbose npm  v5.3.0
+10 error missing script: stop
+11 verbose exit [ 1, true ]
